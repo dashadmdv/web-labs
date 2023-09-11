@@ -1,0 +1,130 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    background-color: #fdfdff;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: 20px;
+}
+
+a:hover img {
+    transform: scale(calc(386 / 366));
+}
+
+img:hover {
+    transform: scale(calc(386 / 366));
+}
+
+.submit {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    color: #fdfdff;
+}
+
+.registration-link {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    color: #fdfdff;
+}
+
+.submit:hover {
+    background: #E47209;
+}
+
+.submit:active {
+    background: #4B9200;
+}
+
+.registration-link:hover {
+    background: #E47209;
+}
+
+.registration-link:active {
+    background: #4B9200;
+}
+
+.log_link {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    color: #fdfdff;
+}
+
+.log_link:hover {
+    background: #E47209;
+}
+
+.log_link:active {
+    background: #4B9200;
+}
+
+.button {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    color: #fdfdff;
+}
+
+.button:hover {
+    background: #E47209;
+}
+
+.button:active {
+    background: #4B9200;
+}
+
+#header {
+  background-color: #f2f2f2;
+  padding: 10px;
+  margin-right: 10;
+}
+
+#header .logo {
+  color: black;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+#subheader {
+  background-color: #e0e0e0;
+  padding: 10px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-right: 10;
+}
+
+#subheader .cart {
+  font-size: 16px;
+  float: left;
+}
+
+#content {
+  padding: 20px;
+}
+
+.resized-image {
+  max-width: 500px;
+  max-height: 500px;
+}
+
+img {
+    width: 400px;
+    height: 400px;
+}
+
+.auth {
+    margin-left: auto;
+    margin-right: 15;
+}

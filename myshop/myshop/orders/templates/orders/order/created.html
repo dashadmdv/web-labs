@@ -1,0 +1,12 @@
+{% extends "shop/base.html" %}
+{% load static%}
+
+{% block title %}Thank you{% endblock %}
+
+{% block content %}
+<link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+    <h1>Thank you</h1>
+    <p>Your appointment has been successfully reserved. Your talon number is
+        <strong>{{ order.id }}</strong>.</p>
+{% endblock %}

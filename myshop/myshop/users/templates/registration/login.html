@@ -1,0 +1,28 @@
+
+{% load static %}
+{% block content %}
+<head>
+    <meta charset="utf-8" />
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+
+</head>
+<div class="registration-wrapper">
+
+    <h2>Log in</h2>
+
+    <form class="registration-form" method="post">
+        {% csrf_token %}
+        <div class="registration_username">Enter user name</div>
+        {{form.username}}
+        <div class="registration_password1">Enter password</div>
+        {{form.password}}
+        {{ form.password.errors }}
+        {{ form.non_field_errors }}
+
+        <input class="submit" type="submit" value="Log in">
+    </form>
+
+    <a class="registration-link" href="{% url 'signup' %}">Sign up</a>
+    <a  class="registration-link" href="{% url 'shop:product_list' %}">Home</a>
+</div>
+{% endblock %}

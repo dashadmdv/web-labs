@@ -1,0 +1,64 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+    background-color: #fdfdff;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: #000000;
+    text-decoration: none;
+}
+
+a:hover {
+
+    font-size: 20px;
+}
+
+.product-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.product-detail h1 {
+    margin-top: 10px;
+    color: black;
+}
+
+.button {
+    background: linear-gradient(113.96deg, #F9804B 1.49%, #FE9013 101.44%);
+    border: none;
+    width: 80px;
+    height: 30px;
+    border-radius: 25px;
+    color: #fdfdff;
+}
+
+.button:hover {
+    background: #E47209;
+}
+
+.button:active {
+    background: #4B9200;
+}
+
+a:hover img {
+    transform: scale(calc(386 / 366));
+}
+
+img:hover {
+    transform: scale(calc(386 / 366));
+}
