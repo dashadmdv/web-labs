@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% block title %}FAQ{% endblock %}
+
+{% block content %}
+    <section itemscope itemtype="https://schema.org/FAQPage">
+        <h2 itemprop="name">Most asked questions</h2>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">What is your Medical Center?</summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    Our Medical Center is a state-of-the-art healthcare facility dedicated to providing high-quality
+                    medical services to our community. We offer a wide range of medical specialties, primary care, and preventive services.
+                </p>
+            </div>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">What should I bring to my appointment?</summary>
+            <p itemprop="text">
+                Please bring your insurance card, a list of medications you are currently taking, and any relevant medical records.
+                If this is your first visit, arrive a few minutes early to complete any necessary paperwork.
+            </p>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">What should I do in case of a medical emergency?
+            </summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    In case of a medical emergency, call 911 immediately or go to the nearest emergency room.
+                    For non-life-threatening urgent care needs, you can visit our page for more information.
+                </p>
+            </div>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">How can I get in touch with your Medical Center?</summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    You can reach us by phone at [Phone Number] during our regular business hours.
+                    Alternatively, you can send us a message through our [Contact Page], and our team will respond promptly.
+                </p>
+            </div>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">Do you have interpreters available for non-English-speaking patients?</summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    Yes, we have interpreters available for a variety of languages.
+                    Please let us know your language preference when scheduling your appointment,
+                    and we will arrange for an interpreter to assist you.
+                </p>
+            </div>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">What insurance plans do you accept?</summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    We accept a wide range of insurance plans.
+                    Please visit our [Insurance and Billing Page] for a list of accepted insurance providers.
+                    If you have questions about your specific plan, contact our billing department for assistance.
+                </p>
+            </div>
+        </details>
+        <details itemprop="question" itemscope itemtype="https://schema.org/Question">
+            <summary itemprop="name">Do you offer telehealth appointments?</summary>
+            <div itemprop="answer" itemscope itemtype="https://schema.org/Answer">
+                <p itemprop="text">
+                    Yes, we offer telehealth appointments for certain medical services.
+                    You can consult with our healthcare providers from the comfort of your home.
+                    Contact our office to schedule a telehealth appointment.
+                </p>
+            </div>
+        </details>
+        <p>If you have any additional questions or require further information, please don't hesitate to contact us.
+            Your health and well-being are our top priorities, and we are here to assist you in any way we can.</p>
+    </section>
+
+{% endblock %}

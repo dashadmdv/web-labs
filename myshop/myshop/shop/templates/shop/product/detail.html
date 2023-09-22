@@ -1,4 +1,4 @@
-{% extends "shop/base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block title %}
@@ -8,7 +8,7 @@
 {% block content %}
     <link href="{% static '/css/detail.css' %}" rel="stylesheet">
     <div class="product-detail">
-        <div class="image-container">
+        <div class="image-container" style="width: 75%">
             <img src="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/no_image.png' %}{% endif %}">
             <h1>{{ product.name }}</h1>
         </div>

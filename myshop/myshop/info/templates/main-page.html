@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Main page{% endblock %}
+
+{% block content %}
+    <section>
+        <h2>Recent news</h2>
+        <h3 itemscope itemtype="https://schema.org/Article">
+            <a itemprop="name" href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a> -
+            <time itemprop="dateCreated"
+                  content="{{ last_article.created_at }}">{{ last_article.created_at|date:'Y-m-d H:i' }}</time>
+        </h3>
+        <p>{{ last_article.description }}</p>
+    </section>
+
+    <section>
+        <h2>Welcome</h2>
+        <figure>
+            <img src="{% static 'images/center_image.jpg' %}" alt="Medical center image">
+            <figcaption>
+                <em>Improve your health and live a long happy life with our medical center!</em>
+            </figcaption>
+        </figure>
+    </section>
+
+    <section>
+        <h2>Our partners:</h2>
+        <ul>
+            <li itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="url" content="https://bsuir.by">
+                <a href="https://bsuir.by" itemprop="name">BSUIR</a>
+                <img itemprop="image" src="https://bsuir.by/favicon.ico" alt="bsuir icon" height="25">
+            </li>
+            <li itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="url" content="https://invitro.by/">
+                <a href="https://invitro.by/" itemprop="name">INVITRO</a>
+                <img itemprop="image" src="https://www.invitro.ru/local/templates/invitro_main/src/image/favicon/favicon.ico?abc" alt="invitro icon" height="35">
+            </li>
+            <li itemscope itemtype="https://schema.org/Organization">
+                <meta itemprop="url" content="https://wdl.by/">
+                <a href="https://wdl.by/" itemprop="name">WDL Optics</a>
+                <img itemprop="image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4gyLO6QVDxuKCgedmiu4V48iHQU-NsxOTGBT5seLYsw&s" alt="wdl icon" height="35">
+            </li>
+        </ul>
+    </section>
+
+
+{% endblock %}

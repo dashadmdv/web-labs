@@ -1,0 +1,116 @@
+{% extends 'base.html' %}
+
+{% block title %}About{% endblock %}
+
+{% block content %}
+    <nav id="nav-about">
+        <a href="#about">About</a>
+
+        <a href="#video">Promo</a>
+
+        <a href="#history">History</a>
+
+        <a href="#certificate">Certificate</a>
+
+        <a href="#contact">Contact us</a>
+    </nav>
+    <section id="about">
+        <h2>About Us</h2>
+        <img src="https://i.pinimg.com/736x/d8/83/fa/d883fa9cd135cd6f2a6c5c17eefc5564.jpg" height="400"
+             alt="medical center logo">
+        <p>Our mission is simple yet profound: to provide compassionate, high-quality healthcare that empowers individuals and families to lead healthier lives.
+            Every day, we strive to uphold this mission in every patient encounter and every service we offer.</p>
+    </section>
+
+    <section id="video">
+        <h2>Promo</h2>
+        <iframe width="80%" style="aspect-ratio: 16 / 9" src="https://www.youtube.com/embed/2MEy18SPIDM?si=o6ziX4BT-eBOdXjF"
+                title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+    </section>
+
+    <section id="history">
+        <h2>History</h2>
+        <details>
+            <summary>2017 - A Vision Takes Shape</summary>
+            <p>
+                In 2017, our Medical Center embarked on a transformative journey to redefine healthcare in our community.
+                Our doors first swung open to patients, marking the beginning of our commitment to exceptional healthcare.
+                The year was defined by the formation of a dedicated team of healthcare professionals who shared a vision of patient-centered care.
+                Initial services included primary care, and our mission was to provide compassionate, high-quality healthcare.
+            </p>
+        </details>
+        <details>
+            <summary>2018 - Growth and Innovation</summary>
+            <p>
+                Building on the trust established in the first year, 2018 saw remarkable growth and innovation.
+                We expanded our services to include specialized care, such as cardiology and orthopedics.
+                Investment in cutting-edge medical technology allowed us to offer more precise diagnostics and treatments.
+                A team of skilled healthcare providers joined us, bringing diverse expertise to our facility.
+            </p>
+        </details>
+        <details>
+            <summary>2019 - Community Outreach</summary>
+            <p>
+                In 2019, our Medical Center extended its reach into the community.
+                Recognizing that healthcare extends beyond our walls, we initiated community outreach programs.
+                These efforts included health education seminars, health fairs, and partnerships with local schools.
+                We aimed to empower our neighbors with the knowledge and tools for better health.
+            </p>
+        </details>
+        <details>
+            <summary>2020 - Navigating Unprecedented Times</summary>
+            <p>
+                The year 2020 brought unprecedented challenges to the healthcare industry with the onset of the COVID-19 pandemic.
+                Our Medical Center responded swiftly to ensure the safety of our patients and staff.
+                Telehealth services were introduced to provide remote consultations, and stringent safety measures were implemented at our facility.
+                Our dedicated healthcare professionals continued to deliver care with unwavering commitment.
+            </p>
+        </details>
+        <details>
+            <summary>2021 - Recognition and Awards</summary>
+            <p>
+                In 2021, our dedication to patient care was acknowledged with several prestigious awards and accolades.
+                These honors recognized our excellence in clinical care, patient satisfaction, and safety standards.
+                Such recognition served as a testament to the dedication and hard work of our entire team.
+            </p>
+        </details>
+        <details>
+            <summary>2022 - Advancing Healthcare</summary>
+            <p>
+                In 2022, our Medical Center continued its journey of advancement.
+                We further expanded our clinical expertise by adding new specialties and subspecialties to our roster.
+                Our commitment to innovation led to the introduction of advanced treatments and therapies.
+                We also initiated health and wellness programs to promote holistic well-being among our patients.
+            </p>
+        </details>
+        <details>
+            <summary>2023 - Looking Ahead</summary>
+            <p>
+                As we step into 2023, our Medical Center remains steadfast in its commitment to delivering patient-centered care,
+                excellence, and community engagement. Our journey continues with a focus on technological innovations,
+                ongoing staff development, and a dedication to improving the overall health of our community.
+            </p>
+            <p>
+                We express our heartfelt gratitude to our patients, staff, and the community for being an integral part of our history.
+                As we look ahead, we are excited about the opportunities to continue making a positive impact on the health and well-being of our community.
+            </p>
+        </details>
+    </section>
+
+
+    <section id="certificate">
+        <hr>
+        <h2>Medical Center Certificate of Accreditation</h2>
+        <img src="static/images/certificate.png">
+        <hr>
+    </section>
+
+    <section id="contact" itemscope itemtype="https://schema.org/ContactPoint">
+        <h2>Contact us</h2>
+        <p>We're here to serve you, and your health and well-being are our top priorities.
+            If you have questions, need to schedule an appointment, or would like more information
+            about our services, please don't hesitate to get in touch with us. You can reach our friendly staff at
+            <a itemprop="email" href="mailto:daassshhhhaaaaadmdv@gmail.com">daassshhhhaaaaadmdv@gmail.com</a>.</p>
+    </section>
+{% endblock %}

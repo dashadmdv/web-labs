@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Examples{% endblock %}
+
+{% block content %}
+    <section id="listing">
+        <h2>Listing (&lt;pre&gt; + &lt;code&gt;)</h2>
+        <pre>
+            <code>
+            class MainPageTemplateView(TemplateView):
+                template_name = "main-page.html"
+
+                def get_context_data(self, **kwargs):
+                    context = super().get_context_data(**kwargs)
+                    context["last_article"] = Article.objects.order_by("-created_at").first()
+                    context["weather"] = get_weather()
+                    context["random_joke"] = get_random_joke()
+                    return context
+            </code>
+            </pre>
+    </section>
+
+    <section id="abbreviation">
+        <h2>Abbreviation (&lt;abbr&gt;)</h2>
+        <abbr title="HyperText Markup Language">HTML</abbr>
+    </section>
+
+    <section id="definition">
+        <h2>Definitions (&lt;dfn&gt;)</h2>
+         <p><dfn title="HyperText Markup Language">HTML</dfn> is the standard markup language for creating web pages.</p>
+    </section>
+
+    <section id="quote">
+        <h2>Quotations (&lt;blockquotes&gt; and &lt;q&gt;)</h2>
+          <p>Here is a BLOCKQUOTE from WWF's website:</p>
+        <blockquote cite="http://www.worldwildlife.org/who/index.html">
+        For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization, WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+        </blockquote>
+         <p>Q QUOTE: WWF's goal is to: <q>Build a future where people live in harmony with nature.</q></p>
+    </section>
+
+    <section id="poem">
+        <h2>Poem (&lt;br&gt;)</h2>
+        <p>
+            Nature's first green is gold,<br>
+            Her hardest hue to hold.<br>
+            Her early leaf's a flower;<br>
+            But only so an hour.<br>
+        </p>
+    </section>
+
+    <section id="wbr">
+        <h2>Possible line break (&lt;wbr&gt;)</h2>
+        <p>
+  http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages
+</p>
+    </section>
+
+    <section>
+        <h2>Audio</h2>
+        <p>&lt;iframe&gt;</p>
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2K7xn816oNHJZ0aVqdQsha?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>&lt;audio&gt;</p>
+        <figure>
+            <figcaption>Listen to the Dollhouse by The Weeknd and Lily-Rose Depp:</figcaption>
+            <audio controls src="static/music/@HipHopFree - Dollhouse - The Weeknd, Lily Rose Depp.mp3"></audio>
+            <a href="static/music/@HipHopFree - Dollhouse - The Weeknd, Lily Rose Depp.mp3" target="_blank" download> Download audio </a>
+        </figure>
+
+    </section>
+{% endblock %}

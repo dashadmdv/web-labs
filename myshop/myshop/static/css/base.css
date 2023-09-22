@@ -4,6 +4,7 @@ body {
     background-color: #fdfdff;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 a {
@@ -83,16 +84,26 @@ img:hover {
     background: #4B9200;
 }
 
-#header {
+#header, #footer {
   background-color: #f2f2f2;
-  padding: 10px;
-  margin-right: 10;
+  padding-top: 10px;
 }
 
 #header .logo {
   color: black;
   font-size: 24px;
   text-decoration: none;
+  padding: 10px;
+}
+
+#header nav ul, #nav-about {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+
+#header nav .navigation {
+    padding-right: 20px;
 }
 
 #subheader {
@@ -102,11 +113,10 @@ img:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-right: 10;
 }
 
 #subheader .cart {
-  font-size: 16px;
+  font-size: 16px{;
   float: left;
 }
 
@@ -127,4 +137,9 @@ img {
 .auth {
     margin-left: auto;
     margin-right: 15;
+}
+
+aside {
+    float: right;
+    width: 25%;
 }

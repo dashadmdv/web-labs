@@ -1,0 +1,82 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="keywords" content="Medical center, Doctors, Appointments"/>
+    <meta name="description" content="Medical center web application"/>
+    <meta name="author" content="Darya Dziamidava"/>
+    <title>{% block title %}Medical center{% endblock %}</title>
+    <link rel="shortcut icon" type="image/png" href="{% static 'images/favicon.png' %}">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <link href="{% static 'css/list.css' %}" rel="stylesheet">
+    <link href="{% static 'css/detail.css' %}" rel="stylesheet">
+</head>
+<body itemscope itemtype="https://schema.org/WebPage">
+<section id="header">
+    <header>
+            <a href="/" class="logo">Medical center</a>
+
+            <nav itemprop="navigation">
+                <div class="navigation">
+                    <ul>
+                        <li><a href="{% url 'main-page' %}">Home</a></li>
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'article-list' %}">News</a></li>
+                        <li><a href="{% url 'faq' %}">FAQ</a></li>
+                        <li><a href="{% url 'contacts' %}">Contacts</a></li>
+                        <li><a href="{% url 'privacy-policy' %}">Privacy Policy</a></li>
+                        <li><a href="{% url 'jobs' %}">Jobs</a></li>
+                        <li><a href="{% url 'feedback-list' %}">Feedbacks</a></li>
+                        <li><a href="{% url 'coupons' %}">Discount coupons</a></li>
+                        <li><a href="{% url 'shop:doctors-list' %}">Doctors</a></li>
+                        {% if user.is_staff %}
+                        <li><a href="{% url 'statistics' %}">Statistics</a></li>
+                        {% endif %}
+                        <li><a href="{% url 'examples' %}">Examples</a></li>
+                    </ul>
+                </div>
+        <div id="subheader">
+            <div class="cart">
+                {% with total_items=cart|length %}
+                {% if cart|length > 0 %}
+                    Your appointments:
+                    <a href="{% url 'cart:cart_detail' %}">
+                        {{ total_items }} doctor{{ total_items|pluralize }},
+                        ${{ cart.get_total_price }}
+                    </a>
+                {% else %}
+                    You don't have appointments yet.
+                {% endif %}
+            {% endwith %}
+            </div>
+            <div class="auth">
+              {% if user.is_authenticated %}
+                Hello, {{ user.get_username }}!
+                <a class="log_link" href="/accounts/logout/">Log out</a>
+              {% else %}
+                <a class="log_link" href="/accounts/login/">Log in</a>
+              {% endif %}
+            </div>
+        </div>
+    </nav>
+    </header>
+</section>
+
+<main itemprop="content" id="content">
+    <aside>
+            Laughter makes you live longer! Here is your joke: <strong>{{ joke }}</strong>
+            <br>
+            Always dress for the weather! Temperature now: <strong>{{ temperature }} °C</strong>
+    </aside>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<section id="footer">
+    <footer>
+        <p>&copy; 2023 Medical center. All rights reserved.</p>
+    </footer>
+</section>
+</body>
+
+</html>

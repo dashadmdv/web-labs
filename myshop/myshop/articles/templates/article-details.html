@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Article details{% endblock %}
+
+{% block content %}
+    <article itemscope itemtype="https://schema.org/Article">
+        <h2 itemprop="name">{{ object.title }}</h2>
+        {% if article.image %}
+            <img itemprop="image" src="{{ article.image.url }}" alt="article image" height="420">
+        {% endif %}
+        <h4 itemprop="description">{{ object.description }}</h4>
+        <p itemprop="article">{{ object.content }}</p>
+    </article>
+
+    <a href="{% url 'article-list' %}">Back to the list</a>
+{% endblock %}

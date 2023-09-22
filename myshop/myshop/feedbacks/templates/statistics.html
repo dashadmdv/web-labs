@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Tours statistics{% endblock %}
+
+{% block content %}
+    <table border="1">
+        <caption>Feedback Statistics</caption>
+        <thead>
+        <tr>
+            <th>Rating</th>
+            <th>Number of feedbacks</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><a href="{% url 'feedback-list' %}?rating=1">One</a></td>
+            <td>{{ feedbacks.one|length }}</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'feedback-list' %}?rating=2">Two</a></td>
+            <td>{{ feedbacks.two|length }}</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'feedback-list' %}?rating=3">Three</a></td>
+            <td>{{ feedbacks.three|length }}</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'feedback-list' %}?rating=4">Four</a></td>
+            <td>{{ feedbacks.four|length }}</td>
+        </tr>
+        <tr>
+            <td><a href="{% url 'feedback-list' %}?rating=5">Five</a></td>
+            <td>{{ feedbacks.five|length }}</td>
+        </tr>
+        </tbody>
+    </table>
+{% endblock %}

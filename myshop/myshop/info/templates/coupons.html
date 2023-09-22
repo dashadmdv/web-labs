@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% block title %}Discount coupons{% endblock %}
+
+{% block content %}
+    <h2>Discount Coupons</h2>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">General Health Check-Up</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">HEALTHY2023</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Get 20% off on a comprehensive general health check-up at our Medical Center.
+            Our skilled healthcare professionals will assess your overall health and provide personalized
+            recommendations to keep you on the path to wellness. Regular price: $150.</p>
+    </article>
+
+    <hr>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">Pediatric Vaccination Bundle</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">KIDSCARE</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Ensure your child's health with a special discount on our pediatric vaccination bundle.
+            Receive 15% off when you schedule a full vaccination series for your child at our
+            Medical Center. Protect your loved ones with the best in pediatric care. Bundle price: $250.</p>
+    </article>
+
+    <hr>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">Dental Check-Up</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">SMILE2023</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Keep your smile healthy with a dental check-up at our Medical Center.
+            Enjoy a 15% discount on a dental examination, cleaning, and oral health assessment.
+            Because a healthy smile is a beautiful smile. Regular price: $80.</p>
+        <p><strong>Valid until:</strong>
+            <time itemprop="validThrough" datetime="2023-31-12">December 31, 2023</time>
+        </p>
+    </article>
+
+    <hr>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">Senior Wellness Package</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">SENIORCARE</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Seniors, save 20% on our comprehensive wellness package tailored to your unique needs.
+            This package includes screenings, preventive care, and consultations to support your well-being.
+            Package price: $200.</p>
+    </article>
+
+    <hr>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">Allergy Testing</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">ALLERGYNOW</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Discover the source of your allergies with 10% off allergy testing at our Medical Center.
+            Identify triggers and find relief from allergy symptoms. Regular price: $150.</p>
+    </article>
+
+    <hr>
+
+    <article itemscope itemtype="https://schema.org/Offer">
+        <h3 itemprop="name">Mental Health Counseling</h3>
+        <p><strong>Coupon code:</strong></p><code itemprop="code">MINDMATTERS</code>
+        <p itemprop="description"><strong>Description:</strong>
+            Prioritize your mental health with a 20% discount on mental health counseling sessions.
+            Our experienced counselors are here to support you on your journey to emotional well-being.
+            Regular session price: $90.</p>
+    </article>
+
+
+{% endblock %}
