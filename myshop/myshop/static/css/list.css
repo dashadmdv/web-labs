@@ -67,3 +67,12 @@ a:hover img {
 img:hover {
     transform: scale(calc(386 / 366));
 }
+
+div#sidebar ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+div#sidebar li:before {
+    content: "\2695";
+}

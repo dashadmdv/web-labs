@@ -4,6 +4,7 @@
 {% block title %}Main page{% endblock %}
 
 {% block content %}
+<link href="{% static 'css/main-page.css' %}" rel="stylesheet">
     <section>
         <h2>Recent news</h2>
         <h3 itemscope itemtype="https://schema.org/Article">
@@ -17,14 +18,14 @@
     <section>
         <h2>Welcome</h2>
         <figure>
-            <img src="{% static 'images/center_image.jpg' %}" alt="Medical center image">
+            <img id="center_pic" src="{% static 'images/center_image.jpg' %}" alt="Medical center image">
             <figcaption>
                 <em>Improve your health and live a long happy life with our medical center!</em>
             </figcaption>
         </figure>
     </section>
 
-    <section>
+    <section id="partners">
         <h2>Our partners:</h2>
         <ul>
             <li itemscope itemtype="https://schema.org/Organization">

@@ -1,0 +1,4 @@
+article p::first-letter {
+    font-size: 30px;
+    color: red;
+}

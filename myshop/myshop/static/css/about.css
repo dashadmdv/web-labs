@@ -1,0 +1,7 @@
+#cert-img {
+    display:inline-block;
+    border: 100px solid transparent;
+    border-image-source: url(../images/kitten-grid.jpg);
+    border-image-repeat: round;
+    border-image-slice: 1160 1160;
+}

@@ -7,21 +7,59 @@ body {
     margin: 0 auto;
 }
 
+main#content{
+    padding: 10px 50px;
+    min-height: fit-content;
+}
+
+*::selection {
+background: #ffb7b7; /* Safari */
+}
+*::-moz-selection {
+background: #ffb7b7; /* Firefox */
+}
+
 a {
     color: #000000;
     text-decoration: none;
 }
 
+a:link {
+    color: rgba(0,35,255,0.75);
+}
+
+a:visited {
+    outline-color: none;
+    color: grey;
+}
+
+nav a:visited {
+    color: #000000;
+}
+
+a:active {
+    color: #0892d0;
+    font-size: 20px;
+}
+
+a:focus {
+    color: #000000;
+    font-size: 20px;
+}
+
 a:hover {
     font-size: 20px;
+    cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat178.cur), auto !important;
 }
 
 a:hover img {
     transform: scale(calc(386 / 366));
+    cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat178.cur), auto !important;
 }
 
 img:hover {
     transform: scale(calc(386 / 366));
+    cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat178.cur), auto !important;
 }
 
 .submit {
@@ -86,7 +124,10 @@ img:hover {
 
 #header, #footer {
   background-color: #f2f2f2;
-  padding-top: 10px;
+}
+
+#footer {
+  padding: 10px 30px;
 }
 
 #header .logo {
@@ -143,3 +184,4 @@ aside {
     float: right;
     width: 25%;
 }
+

@@ -1,0 +1,29 @@
+#partners li {
+    display: inline-flex;
+    background-color: purple;
+    width: 10%;
+    height: 20%;
+    border-radius: 100px;
+    border: 3px solid green;
+    box-shadow: 0 0 7px #666;
+    justify-content: center;
+    align-items: center;
+}
+
+#partners {
+    margin-bottom:10%;
+}
+
+#partners a {
+    font-kerning: normal;
+    letter-spacing: -1;
+}
+
+figure #center_pic {
+    position: relative;
+    animation: animate 5s linear infinite;
+}
+
+@keyframes animate {0% {left: -5%; transform: scale(1) rotate(0deg)}
+50% {left: 50%; transform: scale(3) rotate(180deg) }
+100% {left: 100%; transform: scale(1) rotate(360deg)}}

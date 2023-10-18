@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}About{% endblock %}
 
 {% block content %}
+<link href="{% static 'css/about.css' %}" rel="stylesheet">
     <nav id="nav-about">
         <a href="#about">About</a>
 
@@ -102,7 +103,9 @@
     <section id="certificate">
         <hr>
         <h2>Medical Center Certificate of Accreditation</h2>
-        <img src="static/images/certificate.png">
+        <div id="cert-img">
+            <img src="static/images/certificate.png">
+        </div>
         <hr>
     </section>
 

@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Article details{% endblock %}
 
 {% block content %}
+<link href="{% static 'css/article.css' %}" rel="stylesheet">
     <article itemscope itemtype="https://schema.org/Article">
         <h2 itemprop="name">{{ object.title }}</h2>
         {% if article.image %}
