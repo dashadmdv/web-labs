@@ -1,18 +1,22 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Article List{% endblock %}
 
 {% block content %}
-    {% for article in object_list %}
-        <article itemscope itemtype="https://schema.org/Article">
-            <h3 itemprop="name">{{ article.title }}</h3>
-            <p>
-                <span itemprop="description">{{ article.description }}</span>...
+<link href="{% static 'css/article.css' %}" rel="stylesheet">
+
+    <section id="article-list">
+        {% for article in object_list %}
+            <article itemscope itemtype="https://schema.org/Article">
+                <h3 itemprop="name">{{ article.title }}</h3>
+                <p class="description">
+                    <span itemprop="description">{{ article.description }}</span>
+                </p>
                 <a href="{{ article.get_absolute_url }}">Read more</a>
-            </p>
-            {% if article.image %}
-                <img itemprop="image" src="{{ article.image.url }}" alt="article image" height="280">
-            {% endif %}
-        </article>
-    {% endfor %}
+                {% if article.image %}
+                    <img itemprop="image" src="{{ article.image.url }}" alt="article image" height="280">
+                {% endif %}
+            </article>
+        {% endfor %}
+    </section>
 {% endblock %}

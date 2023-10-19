@@ -1,22 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
 body {
-    font-family: 'Roboto', sans-serif;
-    min-height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
     background-color: #fdfdff;
     display: flex;
-    flex-direction: column;
-    margin: 0 auto;
+    flex-direction: column; overflow-x: hidden;
+    margin: 0 auto; background: url(../images/bg2.svg) no-repeat fixed center; background-size: cover;
 }
 
 main#content{
     padding: 10px 50px;
-    min-height: fit-content;
-}
+    height: fit-content;}
 
 *::selection {
-background: #ffb7b7; /* Safari */
+background: #ffb7b7;
 }
 *::-moz-selection {
-background: #ffb7b7; /* Firefox */
+background: #ffb7b7;
 }
 
 a {
@@ -126,8 +126,14 @@ img:hover {
   background-color: #f2f2f2;
 }
 
+#header {
+    position: sticky;
+    top: 0; z-index: 999;
+}
+
 #footer {
   padding: 10px 30px;
+  margin-top: 5%; position: fixed; bottom: 0; width: 100%;
 }
 
 #header .logo {
@@ -157,7 +163,7 @@ img:hover {
 }
 
 #subheader .cart {
-  font-size: 16px{;
+  font-size: 16px;
   float: left;
 }
 
@@ -165,23 +171,16 @@ img:hover {
   padding: 20px;
 }
 
-.resized-image {
-  max-width: 500px;
-  max-height: 500px;
-}
-
-img {
-    width: 400px;
-    height: 400px;
-}
-
 .auth {
     margin-left: auto;
     margin-right: 15;
 }
 
-aside {
+main#content aside#api-info {
     float: right;
-    width: 25%;
+    width: 10%;
+    position: relative;
+    top: 30px;
+    left: 15px;
+    clear: right;
 }
-

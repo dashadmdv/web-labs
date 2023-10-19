@@ -1,15 +1,17 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Contacts{% endblock %}
 
 {% block content %}
+<link href="{% static 'css/contacts.css' %}" rel="stylesheet">
+
     <section>
         <h2>Our Team</h2>
         <p>
             At our Medical Center, our dedicated team of healthcare professionals is here to provide you with the highest quality care.
             If you need to get in touch with a specific member of our team, please find their contact information below:
         </p>
-        <ul>
+        <ul id="contact-info">
             <li itemscope itemtype="https://schema.org/Person">
                 <h3 itemprop="name">Darya Dziamidava</h3>
                 <p itemprop="jobTitle"><strong>Position:</strong> BIG BOSS</p>
@@ -22,18 +24,21 @@
                 <p itemprop="jobTitle"><strong>Position:</strong> Cardiologist</p>
                 <p><strong>Email:</strong> <a href="mailto:emily.rodriguez@healthlinkmedical.com" itemprop="email">emily.rodriguez@healthlinkmedical.com</a></p>
                 <p><strong>Phone:</strong> <span itemprop="telephone">(555) 123-4567</span></p>
+                <img src="static/images/kitten1.jpg" alt="Dr. Rodriguez">
             </li>
             <li itemscope itemtype="https://schema.org/Person">
                 <h3 itemprop="name">Sarah Johnson, RN</h3>
                 <p itemprop="jobTitle"><strong>Position:</strong> Registered Nurse</p>
                 <p><strong>Email:</strong> <a href="mailto:sarah.johnson@healthlinkmedical.com" itemprop="email">sarah.johnson@healthlinkmedical.com</a></p>
                 <p><strong>Phone:</strong> <span itemprop="telephone">(555) 987-6543</span></p>
+                <img src="static/images/kitten4.jpg" alt="RN Johnson">
             </li>
             <li itemscope itemtype="https://schema.org/Person">
                 <h3 itemprop="name">Dr. Michael Lee</h3>
                 <p itemprop="jobTitle"><strong>Position:</strong> Orthopedic Surgeon</p>
                 <p><strong>Email:</strong> <a href="mailto:michael.lee@healthlinkmedical.com" itemprop="email">michael.lee@healthlinkmedical.com</a></p>
                 <p><strong>Phone:</strong> <span itemprop="telephone">(555) 321-7890</span></p>
+                <img src="static/images/kitten3.jpg" alt="Dr. Lee">
             </li>
         </ul>
         <p>For general inquiries or assistance in finding the right team member, please contact our main office at:</p>

@@ -1,8 +1,100 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Examples{% endblock %}
 
 {% block content %}
+<link href="{% static 'css/examples.css' %}" rel="stylesheet">
+
+    <section id="pseudocl-str">
+        <h2>Structure pseudoclasses</h2>
+        <p>First child should be blue, the last - red</p>
+        <p>Every second child should be underlined</p>
+        <ul>
+            <li>First child</li>
+            <li>Second child</li>
+            <li>Third child</li>
+            <li>Fourth child</li>
+            <li>Fifth child</li>
+            <li>Sixth child</li>
+        </ul>
+    </section>
+
+    <section id="pseudocl-ui">
+        <h2>UI pseudoclasses</h2>
+        <p><strong>:enabled</strong></p>
+        <textarea cols="30" rows="5">Enabled textarea</textarea>
+
+        <p><strong>:required</strong></p>
+        <form>
+            <label>Name: <span class="req"></span></label>
+            <input name="name" type="text" required />
+        </form>
+
+        <p><strong>:disabled</strong></p>
+        <textarea disabled cols="30" rows="5">Disabled textarea</textarea>
+
+        <p><strong>:out-of-range</strong></p>
+        <form>
+            <label>Date: (Whole year 2023 is acceptable)</label>
+            <input name="dep" type="date" min="2023-01-01" max="2023-12-31" value="2025-05-05" />
+        </form>
+
+        <p><strong>:checked</strong></p>
+        <form>
+            <input type="checkbox"><span>1</span><br>
+            <input type="checkbox"><span>2</span><br>
+            <input type="checkbox" checked><span>3</span><br>
+            <input type="checkbox"><span>4</span><br>
+            <input type="checkbox"><span>5</span><br>
+        </form>
+
+        <p><strong>:lang</strong></p>
+            <p>French: <q lang="fr">Bonjour mon ami</q>.</p>
+            <p>German: <q lang="de">Guten tag</q>.</p>
+            <p>English: <q lang="en">Hello how are you what a great day isn't it</q>.</p>
+    </section>
+
+    <section id="pseudoel">
+        <h2>Pseudoelements</h2>
+        <p>:before and :after</p>
+        <p id="p-pseudoel">original text</p>
+    </section>
+
+    <section id="table-css">
+        <h2>Table styling</h2>
+        <table id="test-table" border="1">
+        <caption>Example table</caption>
+        <thead>
+        <tr>
+            <th>Letter</th>
+            <th>Number</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>b</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>c</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>e</td>
+            <td>5</td>
+        </tr>
+        </tbody>
+    </table>
+    </section>
+
     <section id="listing">
         <h2>Listing (&lt;pre&gt; + &lt;code&gt;)</h2>
         <pre>

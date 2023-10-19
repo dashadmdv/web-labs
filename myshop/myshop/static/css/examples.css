@@ -1,0 +1,87 @@
+#pseudocl-str ul li:first-child {
+    width: fit-content;
+    background: blue;
+}
+
+#pseudocl-str ul li:last-child {
+    width: fit-content;
+    background: red;
+}
+
+#pseudocl-str ul li:nth-child(2n) {
+    text-decoration: underline;
+}
+
+textarea:enabled {
+    border: 5px solid orange;
+    padding: 5px;
+}
+
+#pseudocl-ui :required {
+    background: gold;
+    border: 5px solid red;
+    padding: 5px;
+}
+
+textarea:disabled {
+       background: #f2f2f2;
+       border: 1px solid #666;
+       padding: 5px;
+}
+
+#pseudocl-ui :out-of-range {
+    background-color: orangered;
+}
+
+#pseudocl-ui :checked + span {
+    background-color: #fc0;
+}
+
+#pseudocl-ui q:lang(de) {
+    quotes: "\201E" "\201C";
+}
+
+#pseudocl-ui q:lang(en) {
+    quotes: "\201C" "\201D";
+}
+
+#pseudocl-ui q:lang(fr) {
+    quotes: "\00AB" "\00BB";
+}
+
+#p-pseudoel:before {
+    content: "Text before, ";
+    background-color: red;
+}
+
+#p-pseudoel:after {
+    content: "text after.";
+    background-color: blue;
+}
+
+#test-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td:empty {
+    background: orange;
+}
+
+#test-table caption {
+    letter-spacing: 20;
+    font-weight: 500;
+}
+
+td {
+    text-align: center;
+    height: 50px;
+    vertical-align: center;
+}
+
+tr:hover {background-color: coral;}
+
+th {
+  background-color: #00008b ;
+  color: white;
+}

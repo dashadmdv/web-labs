@@ -4,7 +4,7 @@
 
 {% block content %}
 <link href="{% static 'css/article.css' %}" rel="stylesheet">
-    <article itemscope itemtype="https://schema.org/Article">
+    <article class="show" itemscope itemtype="https://schema.org/Article">
         <h2 itemprop="name">{{ object.title }}</h2>
         {% if article.image %}
             <img itemprop="image" src="{{ article.image.url }}" alt="article image" height="420">

@@ -1,5 +1,4 @@
 body {
-    font-family: 'Roboto', sans-serif;
     min-height: 100%;
     background-color: #fdfdff;
     display: flex;
@@ -38,10 +37,10 @@ a:active {
     background: #4B9200;
 }
 
-.product-columns {
+/*.product-columns {
     column-count: 2;
     column-gap: 20px;
-}
+}*/
 
 .product-list {
     display: flex;
@@ -56,8 +55,9 @@ a:active {
 }
 
 .item img {
-    width: 400px;
-    height: 400px;
+    width: 50%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
 }
 
 a:hover img {

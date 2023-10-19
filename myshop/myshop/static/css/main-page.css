@@ -1,6 +1,12 @@
+#recent-news {
+    position: relative;
+    top: 10px;
+}
+
 #partners li {
     display: inline-flex;
-    background-color: purple;
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     width: 10%;
     height: 20%;
     border-radius: 100px;
@@ -19,7 +25,7 @@
     letter-spacing: -1;
 }
 
-figure #center_pic {
+[alt="Medical center image"] {
     position: relative;
     animation: animate 5s linear infinite;
 }
@@ -27,3 +33,9 @@ figure #center_pic {
 @keyframes animate {0% {left: -5%; transform: scale(1) rotate(0deg)}
 50% {left: 50%; transform: scale(3) rotate(180deg) }
 100% {left: 100%; transform: scale(1) rotate(360deg)}}
+
+[title^="Company"] {
+    font-family: Lato;
+    font-kerning: normal;
+    margin-top: -10px;
+}

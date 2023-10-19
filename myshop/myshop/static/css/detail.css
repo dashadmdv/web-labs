@@ -1,5 +1,4 @@
 body {
-    font-family: 'Roboto', sans-serif;
     min-height: 100%;
     background-color: #fdfdff;
     display: flex;
@@ -56,4 +55,8 @@ a:hover img {
 
 img:hover {
     transform: scale(calc(386 / 366));
+}
+
+.image-container img {
+    object-fit: cover;
 }

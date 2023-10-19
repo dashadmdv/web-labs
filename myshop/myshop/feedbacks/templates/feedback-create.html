@@ -3,7 +3,7 @@
 {% block title %}Create feedback{% endblock %}
 
 {% block content %}
-    <h2>Create new article</h2>
+    <h2>Create new feedback</h2>
     <form method="post">
         {% csrf_token %}
         <p>
@@ -19,6 +19,6 @@
             <label for="id_content">Content:</label>
             <textarea name="content" required="required" id="id_content"></textarea>
         </p>
-        <button type="submit">Save</button>
+        <button type="submit" class="submit">Save</button>
     </form>
 {% endblock %}

@@ -5,7 +5,8 @@
 
 {% block content %}
 <link href="{% static 'css/main-page.css' %}" rel="stylesheet">
-    <section>
+<link href="http://fonts.googleapis.com/css?family=Lato:900" rel="stylesheet">
+    <section id="recent-news">
         <h2>Recent news</h2>
         <h3 itemscope itemtype="https://schema.org/Article">
             <a itemprop="name" href="{{ last_article.get_absolute_url }}">{{ last_article.title }}</a> -
@@ -16,7 +17,8 @@
     </section>
 
     <section>
-        <h2>Welcome</h2>
+        <h3>Welcome to</h3>
+        <h2 class="company-name" title="Company name">Darya Dziamidava's Medical Center</h2>
         <figure>
             <img id="center_pic" src="{% static 'images/center_image.jpg' %}" alt="Medical center image">
             <figcaption>
