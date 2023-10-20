@@ -1,0 +1,51 @@
+#cert-img > img {
+    width: 80%;
+    display:inline-block;
+    border: 100px solid transparent;
+    border-image-source: url(../../images/kitten-grid.jpg);
+    border-image-repeat: round;
+    border-image-slice: 1160 1160;
+}
+
+[alt*="logo"]:hover {
+    transform: scale(0.9) rotate(-5deg);
+}
+
+#contact {
+    margin-bottom: 7%;
+}
+
+[alt*="logo"] {
+    width: 60%;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1000px) {
+    .comp-logo {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #cert-img {
+        width: 70%;
+    }
+
+    #contact {
+        margin-bottom: 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #cert-img > img {
+        border: none;
+        width: 90%;
+    }
+
+    .comp-logo {
+        width: 80%;
+    }
+   #contact {
+        margin-bottom: 25%;
+    }
+}

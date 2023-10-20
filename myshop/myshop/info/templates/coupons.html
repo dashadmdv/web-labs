@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Discount coupons{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/styles/coupons.css' %}">
     <h2>Discount Coupons</h2>
 
-    <section id="coupons-list" style="display:grid; grid-template-columns: 45% 45%; grid-column-gap: 10%; grid-row-gap:5%; margin-bottom: 10%;">
-        <style>#coupons-list article { background: rgba(0, 0, 0, 0.3); border-radius: 20px; padding: 10px;}</style>
+    <section id="coupons-list">
         <article itemscope itemtype="https://schema.org/Offer">
             <h3 itemprop="name">General Health Check-Up</h3>
             <p><strong>Coupon code:</strong></p><code itemprop="code">HEALTHY2023</code>

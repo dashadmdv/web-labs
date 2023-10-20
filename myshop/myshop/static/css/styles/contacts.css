@@ -1,0 +1,50 @@
+img {
+    width: 90%;
+    aspect-ratio: 1 / 1;
+}
+
+#contact-info {
+    display: grid;
+    grid-template-columns: 47.5% 47.5%;
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+    list-style-type: none;
+}
+
+#contact-info li {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 1% 0px 5% 5%;
+    width: 70%;
+    overflow-wrap: break-word;
+}
+
+#contact-content {
+    margin-bottom: 5%;
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-info {
+        display: flex;
+        flex-direction: column;
+        & li {
+            width: 90%;
+        }
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #contact-content {
+        margin-bottom: 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #contact-content {
+        margin-bottom: 25%;
+    }
+
+    #contact-info li {
+        width: 110%;
+    }
+}

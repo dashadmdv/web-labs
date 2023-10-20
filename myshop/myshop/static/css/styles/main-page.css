@@ -9,7 +9,7 @@
     background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
     width: 10%;
     height: 20%;
-    border-radius: 100px;
+    border-radius: 100%;
     border: 3px solid green;
     box-shadow: 0 0 7px #666;
     justify-content: center;
@@ -38,4 +38,32 @@
     font-family: Lato;
     font-kerning: normal;
     margin-top: -10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    #partners li {
+        display: block;
+        border: none;
+        box-shadow: none;
+        background: none;
+        width: 50%;
+        height: auto;
+    }
+
+    [alt="Medical center image"] {
+        animation: none;
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #partners {
+        margin-bottom:15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #partners {
+        margin-bottom:-30%;
+    }
 }

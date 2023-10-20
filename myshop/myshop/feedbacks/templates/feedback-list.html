@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
-
+{% load static%}
 {% block title %}Feedbacks{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/styles/feedback.css' %}">
+
     <a href="{% url 'feedback-create' %}" class="submit"
        style="padding: 10px; width:fit-content; display:inline-block; padding-bottom:0; margin-top:10px;">New feedback</a>
     {% if not feedback_list %}
         <p>No feedbacks</p>
     {% endif %}
-    <section id="feed-list" style="display:grid; grid-template-columns: 45% 45%; grid-column-gap: 10%; grid-row-gap:5%; margin-top: 1%; margin-bottom: 10%;">
-            <style>#feed-list article { background: rgba(0, 0, 0, 0.3); border-radius: 20px; padding: 10px;}</style>
+    <section id="feed-list">
         {% for feedback in object_list %}
             <article itemscope itemtype="https://schema.org/UserReview">
                 <h2>

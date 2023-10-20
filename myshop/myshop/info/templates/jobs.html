@@ -1,12 +1,14 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}Jobs{% endblock %}
 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/styles/jobs.css' %}">
+
     <h2>Job Vacancies at Our Medical Center</h2>
 
-    <section id="jobs-list" style="display:grid; grid-template-columns: 45% 45%; grid-column-gap: 10%; grid-row-gap:5%; margin-bottom: 10%;">
-        <style>#jobs-list article { background: rgba(0, 0, 0, 0.3); border-radius: 20px; padding: 10px;}</style>
+    <section id="jobs-list">
+
         <article itemscope itemtype="https://schema.org/JobPosting">
             <h3 itemprop="title">Registered Nurse (RN)</h3>
             <p itemprop="description"><strong>Job Description:</strong> We are seeking a dedicated and compassionate Registered Nurse (RN)

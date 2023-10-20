@@ -3,7 +3,7 @@
 {% block title %}Examples{% endblock %}
 
 {% block content %}
-<link href="{% static 'css/examples.css' %}" rel="stylesheet">
+<link href="{% static 'css/styles/examples.css' %}" rel="stylesheet">
 
     <section id="pseudocl-str">
         <h2>Structure pseudoclasses</h2>
@@ -95,6 +95,59 @@
     </table>
     </section>
 
+    <section id="text-css">
+        <h2>Text styling</h2>
+        <div id="text-block">
+            <p style="text-shadow: 2px 2px 5px red;">This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+                and color properties. The paragraph is indented, aligned, and the space between characters is specified.
+                The underline is removed from this colored "Try it Yourself" link.
+                A text can be left or right aligned, centered, or justified.
+                The following example shows center aligned, and left and right aligned text
+                (left alignment is default if text direction is left-to-right,
+                and right alignment is default if text direction is right-to-left).
+            </p>
+            <p style="letter-spacing: 5px; word-spacing: 10px;">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+                et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+            <p style="line-height: 50px;">
+                This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+                and color properties. The paragraph is indented, aligned, and the space between characters is specified.
+                The underline is removed from this colored "Try it Yourself" link.
+                A text can be left or right aligned, centered, or justified.
+                The following example shows center aligned, and left and right aligned text
+                (left alignment is default if text direction is left-to-right,
+                and right alignment is default if text direction is right-to-left).
+            </p>
+            <p style="text-decoration: underline red double 2px;">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+                et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+            <p style="font-variant: small-caps;">
+                This text is styled with some of the text formatting properties. The heading uses the text-align, text-transform,
+                and color properties. The paragraph is indented, aligned, and the space between characters is specified.
+                The underline is removed from this colored "Try it Yourself" link.
+                A text can be left or right aligned, centered, or justified.
+                The following example shows center aligned, and left and right aligned text
+                (left alignment is default if text direction is left-to-right,
+                and right alignment is default if text direction is right-to-left).
+            </p>
+            <p style='font-family: "Comic Sans MS", cursive, sans-serif;'>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+                dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
+                vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan
+                et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+            </p>
+        </div>
+    </section>
+
     <section id="listing">
         <h2>Listing (&lt;pre&gt; + &lt;code&gt;)</h2>
         <pre>
@@ -148,7 +201,7 @@
 </p>
     </section>
 
-    <section>
+    <section id="audio-ex">
         <h2>Audio</h2>
         <p>&lt;iframe&gt;</p>
         <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2K7xn816oNHJZ0aVqdQsha?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>

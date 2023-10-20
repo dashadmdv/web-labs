@@ -85,3 +85,42 @@ th {
   background-color: #00008b ;
   color: white;
 }
+
+#audio-ex {
+    margin-bottom: 7%;
+}
+
+#text-block {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    padding: 20px 15px 30px 80px;
+}
+
+#text-css h2 {
+    text-transform: uppercase;
+}
+
+#text-css p {
+    color: white;
+    text-align: justify;
+    text-indent: 50px;
+ /*   word-wrap: break-word;
+    word-break: break-all;*/
+    hyphens: auto;
+}
+
+input[type="checkbox"] {
+    width: fit-content;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #audio-ex {
+        margin-bottom: 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #audio-ex {
+        margin-bottom: 25%;
+    }
+}

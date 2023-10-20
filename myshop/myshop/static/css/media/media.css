@@ -1,0 +1,13 @@
+@media only screen and (max-width: 1000px) {
+    #partners li {
+        height: 10%;
+    }
+
+    #partners {
+        margin-bottom:15%;
+    }
+
+    [alt="Medical center image"] {
+        animation: none;
+    }
+}

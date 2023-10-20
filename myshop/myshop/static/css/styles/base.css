@@ -5,7 +5,7 @@ body {
     background-color: #fdfdff;
     display: flex;
     flex-direction: column; overflow-x: hidden;
-    margin: 0 auto; background: url(../images/bg2.svg) no-repeat fixed center; background-size: cover;
+    margin: 0 auto; background: url(../../images/bg2.svg) no-repeat fixed center; background-size: cover;
 }
 
 main#content{
@@ -34,7 +34,11 @@ a:visited {
 }
 
 nav a:visited {
-    color: #000000;
+    color: #000000;;
+}
+
+nav a:hover {
+    color: #F9804B;;
 }
 
 a:active {
@@ -43,12 +47,12 @@ a:active {
 }
 
 a:focus {
-    color: #000000;
+    color: #F9804B;;
     font-size: 20px;
 }
 
 a:hover {
-    font-size: 20px;
+    font-size: 20px; color: #F9804B;
     cursor: url(https://cur.cursors-4u.net/nature/nat-2/nat178.cur), auto !important;
 }
 
@@ -78,6 +82,7 @@ img:hover {
 
 .submit:hover {
     background: #E47209;
+    color: #ffffff;
 }
 
 .submit:active {
@@ -99,6 +104,7 @@ img:hover {
 
 .log_link:hover {
     background: #E47209;
+    color: #ffffff;
 }
 
 .log_link:active {
@@ -182,5 +188,54 @@ main#content aside#api-info {
     position: relative;
     top: 30px;
     left: 15px;
-    clear: right;
+    clear: right; word-wrap: break-word;
+    background: rgba(0, 0, 0, 0.3); border-radius: 20px; padding: 10px;
+}
+
+input, textarea {
+    width: 80%;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    padding: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+input:focus, textarea:focus {
+    background-color: lightblue;
+    border: 3px solid #555;
+}
+
+input:invalid {
+    background-color: #ffcccb;
+}
+
+@media only screen and (max-width: 750px) {
+    main#content aside#api-info {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+    #header nav ul, #nav-about {
+      display: grid;
+      grid-template-columns: 15% 15% 15% 15% 15% 15%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #header nav ul, #nav-about {
+      display: grid;
+      grid-template-columns: 30% 30% 30%;
+    }
+
+    #header {
+        position: static;
+        width: 100%;
+    }
+
+    main#content {
+        position: relative;
+    }
 }
