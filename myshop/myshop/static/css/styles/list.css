@@ -1,10 +1,3 @@
-body {
-    min-height: 100%;
-    background-color: #fdfdff;
-    display: flex;
-    flex-direction: column;
-}
-
 a {
     color: #000000;
     text-decoration: none;
@@ -51,12 +44,14 @@ a:active {
 
 .item {
     width: calc(50% - 10px);
+    min-width: 300px;
+    max-width: 600px;
     margin-bottom: 20px;
     color: black;
 }
 
 .item img {
-    width: 50%;
+    width: 75%;
     aspect-ratio: 1 / 1;
     object-fit: cover;
 }
