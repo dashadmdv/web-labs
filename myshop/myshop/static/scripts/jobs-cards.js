@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    function applyParallax(card) {
+    function moveCard(card) {
         const onMouseMove = (e) => {
             const mouseX = e.clientX;
             const mouseY = e.clientY;
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function cardsAnimationMain() {
         const cards = document.querySelectorAll('.article');
         cards.forEach((card) => {
-            card.addEventListener('mouseenter', () => applyParallax(card));
+            card.addEventListener('mouseenter', () => moveCard(card));
         });
     }
 

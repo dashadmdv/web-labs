@@ -19,6 +19,19 @@ img {
     overflow-wrap: break-word;
 }
 
+.animation {
+    opacity: 0;
+    transform: translateX(-60%);
+    transition: all 1.5s ease-out;
+    transition-delay: 0.3s;
+
+}
+
+.scroll-animation {
+    opacity: 1;
+    transform: translateX(0);
+}
+
 #contact-content {
     margin-bottom: 5%;
 }
