@@ -25,6 +25,32 @@
         <br>
     </section>
 
+    <section id="cube-problem" style="max-width: 80%;">
+        <h2>Расчет кубиков</h2>
+        <p>Дан ассоциативный массив, содержащий сведения о кубиках: размер каждого кубика
+(длина ребра в сантиметрах) и его цвет (красный, желтый, синий или зеленый). Найти
+количество кубиков каждого из перечисленных цветов и их суммарный объем.</p>
+        <form id="cubesForm">
+        <label for="color">Цвет кубика:</label>
+        <select id="color">
+            <option value="red">Красный</option>
+            <option value="yellow">Желтый</option>
+            <option value="blue">Синий</option>
+            <option value="green">Зеленый</option>
+        </select>
+        <br><br>
+        <label for="size">Размер кубика (см):</label>
+        <input type="number" id="size">
+        <br><br>
+        <button type="button" onclick="addCube()">Добавить кубик</button>
+        </form>
+        <h3>Введенные кубики:</h3>
+        <ul id="cubesList"></ul>
+        <h3>Результат:</h3>
+        <div id="results"></div>
+        <script src="{% static 'scripts/cubes.js' %}"></script>
+    </section>
+
     <section id="pseudocl-str">
         <h2>Structure pseudoclasses</h2>
         <p>First child should be blue, the last - red</p>
