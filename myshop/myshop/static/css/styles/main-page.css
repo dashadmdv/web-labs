@@ -47,6 +47,35 @@
     margin-top: -10px;
 }
 
+.banners {
+    max-width: 75%;
+}
+
+.banner-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 300px;
+}
+
+.banner-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+    aspect-ratio: 9 / 2;
+
+}
+
+.banner-container img:first-child {
+    opacity: 1;
+}
+
+
+
+
 @media only screen and (max-width: 1000px) {
     #partners li {
         display: block;
