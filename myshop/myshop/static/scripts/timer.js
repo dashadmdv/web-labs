@@ -10,8 +10,8 @@ function startCountdown(hours) {
 
         if (seconds > 0) {
             seconds--;
-            // Сохраняем оставшееся время в localStorage
-            localStorage.setItem('countdownSeconds', seconds);
+            // Сохраняем оставшееся время в sessionStorage
+            sessionStorage.setItem('countdownSeconds', seconds);
         } else {
             clearInterval(countdownInterval);
             countdownElement.innerHTML = "Time is over";
@@ -20,13 +20,13 @@ function startCountdown(hours) {
 
     let countdownInterval;
 
-    // Проверяем, есть ли сохраненные данные в localStorage
-    if (localStorage.getItem('countdownSeconds')) {
-        seconds = parseInt(localStorage.getItem('countdownSeconds'));
+    // Проверяем, есть ли сохраненные данные в sessionStorage
+    if (sessionStorage.getItem('countdownSeconds')) {
+        seconds = parseInt(sessionStorage.getItem('countdownSeconds'));
         countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
     } else {
-        // обратный отсчет, если данных в localStorage нет
+        // обратный отсчет, если данных в sessionStorage нет
         countdownInterval = setInterval(updateCountdown, 1000);
         updateCountdown();
     }
