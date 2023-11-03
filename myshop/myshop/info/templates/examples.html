@@ -121,7 +121,7 @@ const john = new Patient('John', 30, '12345', 'P123', 'male');
 genderDecorator(john);
         </pre>
         <h3>Test functions</h3>
-        <p>There's patient entity john: name - 'John', age - 30, medical record - '12345', ID - 'P123', gender - 'male');</p>
+        <p>There's patient entity john: name - 'John', age - 30, medical record - '12345', ID - 'P123', gender - 'male';</p>
         <button id="getAgeButton">Get age</button>
         <button id="getJustNameButton">Get name</button>
         <button id="getMedicalRecordButton">Get medical record</button>
@@ -135,6 +135,113 @@ genderDecorator(john);
             <input type="date" id="appointmentDate">
         </div>
         <script src="{% static 'scripts/prototypes.js' %}"></script>
+
+        <h3>Using classes</h3>
+        <pre style="height:400px;font-size:14px;overflow:auto;border:3px;padding:2%">
+// через классы
+// Базовый класс User
+class User {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    getAge() {
+        return this.age;
+    }
+
+    setAge(age) {
+        this.age = age;
+    }
+
+    getJustName() {
+        return this.name;
+    }
+
+    getName() {
+        return this.name;
+    }
+
+    setName(newName) {
+        this.name = newName;
+    }
+}
+
+// Класс наследник Patient
+class Patient extends User {
+    constructor(name, age, medicalRecord, id, gender) {
+        super(name, age); // Вызываем конструктор базового класса
+
+        this.medicalRecord = medicalRecord;
+        this.id = id;
+        this.gender = gender;
+    }
+
+    getMedicalRecord() {
+        return this.medicalRecord;
+    }
+
+    setMedicalRecord(medicalRecord) {
+        this.medicalRecord = medicalRecord;
+    }
+
+    getId() {
+        return this.id;
+    }
+
+    setId(id) {
+        this.id = id;
+    }
+
+    // Метод, который поздравляет с днем рождения
+    happyBirthday() {
+        this.age++;
+        return `Happy Birthday, ${this.getName()}! Now you are ${this.getAge()} years old.`;
+    }
+
+    // Метод для записи пациента на прием
+    scheduleAppointment(date) {
+        return `Patient ${this.getName()} has scheduled an appointment for ${date}.`;
+    }
+}
+
+// Декоратор, который добавляет "Mr." или "Mrs." к имени в зависимости от пола
+function genderDecorator(patient) {
+    const originalGetName = patient.getName.bind(patient);
+
+    patient.getName = function () {
+        let name = originalGetName();
+        if (this.gender === 'male') {
+            name = 'Mr. ' + name;
+        } else if (this.gender === 'female') {
+            name = 'Mrs. ' + name;
+        }
+        return name;
+    };
+
+    return patient;
+}
+
+// Создаем объект пациента
+const dasha = new Patient('Darya', 19, '29724', 'P666', 'female');
+genderDecorator(dasha);
+
+        </pre>
+        <h3>Test functions</h3>
+        <p>There's patient entity dasha: name - 'Darya', age - 19, medical record - '29724', ID - 'P666', gender - 'female';</p>
+        <button id="getClassAgeButton">Get age</button>
+        <button id="getClassJustNameButton">Get name</button>
+        <button id="getClassMedicalRecordButton">Get medical record</button>
+        <button id="getClassIdButton">Get ID</button>
+        <button id="getClassNameButton">DECORATOR ON NAME</button>
+        <button id="happyBirthdayClassButton">Wish Happy Birthday</button>
+        <button id="scheduleAppointmentClassButton">Schedule an appointment</button>
+        <br><br>
+        <div>
+            <label for="appointmentDateClass">Date of appointment:</label>
+            <input type="date" id="appointmentDateClass">
+        </div>
+        <script src="{% static 'scripts/classes.js' %}"></script>
     </section>
 
     <section id="cube-problem" style="max-width: 80%;">
