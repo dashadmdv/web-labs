@@ -190,6 +190,7 @@ main#content aside#api-info {
     left: 15px;
     clear: right; word-wrap: break-word;
     background: rgba(0, 0, 0, 0.3); border-radius: 20px; padding: 10px;
+    z-index: 998;
 }
 
 input, textarea {
