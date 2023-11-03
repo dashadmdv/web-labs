@@ -69,6 +69,7 @@ function calculateAge() {
 
     // Проверяем совершеннолетие
     if (age < 18) {
+        document.getElementById("dayOfWeek").textContent = "";
         document.getElementById("permission").textContent = "You need your parents' permission to use this webpage.";
     } else {
         // Получаем день недели
