@@ -5,7 +5,21 @@ function openModal() {
     modal.className = "modal";
 
     modal.innerHTML = `
-        <style>
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h1>Please, enter your birthdate:</h1>
+            <input type="date" id="birthdate">
+            <button id="calculateAge">Count age</button>
+            <p id="ageResult"></p>
+            <p id="dayOfWeek"></p>
+            <p id="permission"></p>
+        </div>
+    `;
+
+    const modal_styles = document.createElement("style");
+
+    modal_styles.innerHTML = `
+            <style>
         .modal {
             position: fixed;
             top: 0;
@@ -27,23 +41,15 @@ function openModal() {
             text-align: center;
         }
         </style>
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <h1>Please, enter your birthdate:</h1>
-            <input type="date" id="birthdate">
-            <button id="calculateAge">Count age</button>
-            <p id="ageResult"></p>
-            <p id="dayOfWeek"></p>
-            <p id="permission"></p>
-        </div>
-    `;
-
+    `
     document.body.appendChild(modal);
+    document.body.insertBefore(modal_styles, modal);
 
     // Обработчик закрытия модального окна
     const closeModal = document.getElementById("closeModal");
     closeModal.addEventListener("click", function() {
-        modal.style.display = "none";
+         document.body.removeChild(modal);
+          document.body.removeChild(modal_styles);
     });
 
     // Обработчик для расчета возраста
