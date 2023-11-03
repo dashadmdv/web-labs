@@ -13,6 +13,7 @@
     <link href="{% static 'css/styles/detail.css' %}" rel="stylesheet">
     {% block styles %}{% endblock %}
     {% block scripts %}{% endblock %}
+    <script src="{% static 'scripts/timer.js' %}" defer></script>
 </head>
 <body itemscope itemtype="https://schema.org/WebPage">
 <section id="header">
@@ -67,6 +68,7 @@
 
 <main itemprop="content" id="content">
     <aside id="api-info">
+        <div id="countdown" style="background: orange;"></div>
             Laughter makes you live longer! Here is your joke: <strong>{{ joke }}</strong>
             <br>
             Always dress for the weather! Temperature now: <strong>{{ temperature }} °C</strong>
