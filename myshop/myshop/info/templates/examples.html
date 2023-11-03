@@ -25,6 +25,118 @@
         <br>
     </section>
 
+    <section id="oop">
+        <h2>OOP</h2>
+        <h3>Using prototypes</h3>
+        <pre style="height:400px;font-size:14px;overflow:auto;border:3px;padding:2%">
+// Базовый класс User
+function User(name, age) {
+    this.name = name;
+    this.age = age;
+}
+
+// Геттер и сеттер возраста
+User.prototype.getAge = function () {
+    return this.age;
+};
+
+User.prototype.setAge = function (age) {
+    this.age = age;
+};
+
+// Геттер и сеттер имени
+User.prototype.getJustName = function () {
+    return this.name;
+};
+
+User.prototype.setName = function (newName) {
+    this.name = newName;
+};
+
+// Класс наследник Patient
+function Patient(name, age, medicalRecord, id, gender) {
+    User.call(this, name, age); // конструктор базового класса
+
+    this.medicalRecord = medicalRecord;
+    this.id = id;
+    this.gender = gender;
+}
+
+// Наследование прототипа базового класса
+Patient.prototype = Object.create(User.prototype);
+
+// Геттер и сеттер для медицинской книжки
+Patient.prototype.getMedicalRecord = function () {
+    return this.medicalRecord;
+};
+
+Patient.prototype.setMedicalRecord = function (medicalRecord) {
+    this.medicalRecord = medicalRecord;
+};
+
+// Геттер и сеттер для ID
+Patient.prototype.getId = function () {
+    return this.id;
+};
+
+Patient.prototype.setId = function (id) {
+    this.id = id;
+};
+
+// Декоратор, который добавляет "Mr." или "Mrs." к имени в зависимости от пола
+function genderDecorator(target) {
+    const originalGetName = target.getName;
+
+    target.getName = function () {
+        let name = originalGetName.call(this);
+        if (this.gender === 'male') {
+            name = 'Mr. ' + name;
+        } else if (this.gender === 'female') {
+            name = 'Mrs. ' + name;
+        }
+        return name;
+    };
+}
+
+// Метод, который возвращает имя пациента
+Patient.prototype.getName = function () {
+    return this.name;
+};
+
+// Метод, который поздравляет с днем рождения
+Patient.prototype.happyBirthday = function () {
+    this.age++;
+    return `Happy Birthday, ${this.getName()}! Now you are ${this.getAge()} years old.`;
+};
+
+// Метод для записи пациента на прием
+Patient.prototype.scheduleAppointment = function (date) {
+    return `Patient ${this.getName()} has scheduled an appointment for ${date}.`;
+};
+
+// Создаем объект пациента
+const john = new Patient('John', 30, '12345', 'P123', 'male');
+
+// Применяем декоратор
+genderDecorator(john);
+        </pre>
+        <h3>Test functions</h3>
+        <p>There's patient entity john: name - 'John', age - 30, medical record - '12345', ID - 'P123', gender - 'male');</p>
+        <button id="getAgeButton">Get age</button>
+        <button id="getJustNameButton">Get name</button>
+        <button id="getMedicalRecordButton">Get medical record</button>
+        <button id="getIdButton">Get ID</button>
+        <button id="getNameButton">DECORATOR ON NAME</button>
+        <button id="happyBirthdayButton">Wish Happy Birthday</button>
+        <button id="scheduleAppointmentButton">Schedule an appointment</button>
+        <br><br>
+        <div>
+            <label for="appointmentDate">Date of appointment:</label>
+            <input type="date" id="appointmentDate">
+        </div>
+        <script src="{% static 'scripts/prototypes.js' %}"></script>
+    </section>
+
     <section id="cube-problem" style="max-width: 80%;">
         <h2>Расчет кубиков</h2>
         <p>Дан ассоциативный массив, содержащий сведения о кубиках: размер каждого кубика
