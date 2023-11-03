@@ -59,12 +59,27 @@ textarea:disabled {
     background-color: blue;
 }
 
-#test-table {
+#test-table, #table {
     width: 100%;
     border-collapse: collapse;
+    text-align: center;
+    height: 50px;
+    vertical-align: center;
 }
 
-td:empty {
+#table {
+    max-width: 70%;
+}
+
+.selected-even {
+    background-color: lightblue;
+}
+
+.selected-odd {
+    background-color: lightgreen;
+}
+
+#test-table td:empty {
     background: orange;
 }
 
@@ -73,15 +88,9 @@ td:empty {
     font-weight: 500;
 }
 
-td {
-    text-align: center;
-    height: 50px;
-    vertical-align: center;
-}
+#test-table tr:hover {background-color: coral;}
 
-tr:hover {background-color: coral;}
-
-th {
+#test-table th {
   background-color: #00008b ;
   color: white;
 }

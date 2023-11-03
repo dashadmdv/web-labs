@@ -2,8 +2,28 @@
 {% load static %}
 {% block title %}Examples{% endblock %}
 
+{% block styles %}
+    <link href="{% static 'css/styles/examples.css' %}" rel="stylesheet">
+{% endblock %}
+
+{% block scripts %}
+    <script src="{% static 'scripts/table_generate.js' %}" defer></script>
+{% endblock %}
+
 {% block content %}
-<link href="{% static 'css/styles/examples.css' %}" rel="stylesheet">
+    <section id="generated-table">
+        <h2>Generated table</h2>
+        <br>
+        <table id="table" border="1"></table>
+        <br>
+        <button id="transpose">Transpose</button>
+        <button id="addRow">Add row</button>
+        <button id="addColumn">Add column</button>
+        <label for="maxSelection">Max selected in the row (also left and right neighbour cells cannot be selected):</label>
+        <input type="number" id="maxSelection" value="2">
+        <button id="updateMaxSelection">Apply restrictions</button>
+        <br>
+    </section>
 
     <section id="pseudocl-str">
         <h2>Structure pseudoclasses</h2>
